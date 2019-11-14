@@ -608,3 +608,11 @@ open class AloeStackView: UIScrollView {
   private static let defaultSeparatorInset: UIEdgeInsets = UITableView().separatorInset
 
 }
+
+#if os(tvOS)
+extension UITableView {
+    var separatorColor: UIColor {
+        return .clear
+    }
+}
+#endif
